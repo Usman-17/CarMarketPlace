@@ -1,12 +1,14 @@
-import { Button } from "./components/ui/button";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
 
 const App = () => {
   return (
     <>
-      <div className="flex justify-center items-center gap-10 h-[100vh]">
-        <div className="text-9xl">App</div>
-        <Button>Click</Button>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };
