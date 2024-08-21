@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Poppins", sans-serif;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
