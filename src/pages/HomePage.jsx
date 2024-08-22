@@ -2,6 +2,7 @@ import Header from "@/components/common/Header";
 import Hero from "@/components/Hero";
 import Category from "@/components/Category";
 import MostSearchedCar from "@/components/MostSearchedCar";
+import InfoSection from "@/components/InfoSection";
 
 const HomePage = () => {
   return (
@@ -10,6 +11,7 @@ const HomePage = () => {
       <Hero />
       <Category />
       <MostSearchedCar />
+      <InfoSection />
     </>
   );
 };
