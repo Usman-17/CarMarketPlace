@@ -1,8 +1,10 @@
-import { UserButton, useUser } from "@clerk/clerk-react";
+import { SignInButton, UserButton, useUser } from "@clerk/clerk-react";
 import { Button } from "../ui/button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const { isSignedIn } = useUser();
+
   return (
     <div className="flex items-center justify-between shadow-sm p-5">
       <img src="/logo.svg" alt="logo" width={150} height={100} />
@@ -25,10 +27,14 @@ const Header = () => {
       {isSignedIn ? (
         <div className="flex items-center gap-5">
           <UserButton />
-          <Button>Submit Listing</Button>
+          <Link to={"/profile"}>
+            <Button>Submit Listing</Button>
+          </Link>
         </div>
       ) : (
-        <Button>Submit Listing</Button>
+        <SignInButton mode="modal" fallbackRedirectUrl="/profile">
+          <Button>Submit Listing</Button>
+        </SignInButton>
       )}
     </div>
   );
